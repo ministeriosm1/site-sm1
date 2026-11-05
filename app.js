@@ -41,6 +41,15 @@ function renderHome() {
     `<button class="filter-chip${index === 0 ? " active" : ""}" data-category="${category}" type="button">${category}</button>`
   ).join("");
 
+  const logoRibbon = $("#heroPartnerLogos");
+  if (logoRibbon) {
+    logoRibbon.innerHTML = sponsors.filter((sponsor) => sponsor.logo).map((sponsor) => `
+      <a class="hero-partner-logo" href="patrocinador.html?empresa=${encodeURIComponent(sponsor.slug)}" aria-label="Conheça ${sponsor.name}">
+        <img src="${sponsor.logo}" alt="${sponsor.name}" loading="lazy">
+      </a>
+    `).join("");
+  }
+
   const draw = (category) => {
     const visible = category === "Todos"
       ? sponsors
@@ -48,8 +57,8 @@ function renderHome() {
 
     grid.innerHTML = visible.length ? visible.map((sponsor) => `
       <a class="sponsor-card" href="patrocinador.html?empresa=${encodeURIComponent(sponsor.slug)}">
-        <div class="sponsor-card-image${sponsor.cover ? " has-cover" : " no-cover"}" style="${sponsor.cover ? `background-image:linear-gradient(0deg,rgba(0,0,0,.35),rgba(0,0,0,.02)),url('${sponsor.cover}')` : ""}">
-          ${!sponsor.cover ? `<span class="card-monogram">${sponsor.name.split(/\s+/).slice(0, 2).map((part) => part[0]).join("").toUpperCase()}</span>` : ""}
+        <div class="sponsor-card-image sponsor-logo-stage">
+          ${sponsor.logo ? `<img class="sponsor-card-logo" src="${sponsor.logo}" alt="Logo ${sponsor.name}" loading="lazy">` : `<span class="card-monogram">${sponsor.name.split(/\\s+/).slice(0, 2).map((part) => part[0]).join("").toUpperCase()}</span>`}
           <span class="card-category">${sponsor.category || "PARCEIRO SM1"}</span>
           <span class="card-arrow" aria-hidden="true">↗</span>
         </div>

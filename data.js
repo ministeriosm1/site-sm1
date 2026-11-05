@@ -14,6 +14,7 @@ const SM1_SITE = {
       slug: "eletronica-3r",
       name: "Eletrônica 3R",
       category: "Eletrônica",
+      logo: "images/eletronica-3r.png",
       tagline: "Parceira do Ministério de Louvor SM1.",
       description: "A Eletrônica 3R faz parte dos parceiros que apoiam o Ministério de Louvor SM1. Em breve, esta página poderá receber mais informações sobre a empresa e seus serviços."
     },
@@ -23,7 +24,7 @@ const SM1_SITE = {
       category: "Estofados",
       tagline: "Conforto pensado para transformar ambientes.",
       description: "A JBS Estofados é parceira do Ministério de Louvor SM1. Conheça alguns modelos de estofados e entre em contato diretamente com a empresa para consultar opções, medidas, tecidos, valores e disponibilidade.",
-      logo: "images/jbs-estofados-logo.webp",
+      logo: "images/jbs-estofados.jpg",
       cover: "images/estofado-area-externa.webp",
       whatsapp: "5581999207109",
       instagram: "https://www.instagram.com/jbs.estofados.fabrica/",
@@ -55,6 +56,7 @@ const SM1_SITE = {
       slug: "lava-jato-filho-do-rei",
       name: "Lava-jato Filho do Rei",
       category: "Lava-jato",
+      logo: "images/lava-jato-filho-do-rei.png",
       tagline: "Parceiro do Ministério de Louvor SM1.",
       description: "O Lava-jato Filho do Rei faz parte dos parceiros que apoiam o Ministério de Louvor SM1. Em breve, esta página poderá receber mais informações sobre os serviços e formas de contato."
     },
@@ -62,6 +64,7 @@ const SM1_SITE = {
       slug: "amadeirado",
       name: "Amadeirado",
       category: "Parceiro SM1",
+      logo: "images/amadeirado.png",
       tagline: "Parceiro do Ministério de Louvor SM1.",
       description: "A Amadeirado faz parte dos parceiros que apoiam o Ministério de Louvor SM1. Em breve, esta página poderá receber mais informações sobre a empresa e sua atuação."
     },
@@ -69,6 +72,7 @@ const SM1_SITE = {
       slug: "antonio-barbosa-madeireira",
       name: "Antônio Barbosa Madeireira",
       category: "Madeireira",
+      logo: "images/antonio-barbosa-esquadrias.png",
       tagline: "Parceira do Ministério de Louvor SM1.",
       description: "A Antônio Barbosa Madeireira faz parte dos parceiros que apoiam o Ministério de Louvor SM1. Em breve, esta página poderá receber mais informações sobre a empresa e seus produtos."
     },
@@ -76,6 +80,7 @@ const SM1_SITE = {
       slug: "miqueias-eletricista",
       name: "Miqueias Eletricista",
       category: "Serviços elétricos",
+      logo: "images/miqueias-eletricista.jpg",
       tagline: "Parceiro do Ministério de Louvor SM1.",
       description: "Miqueias Eletricista faz parte dos parceiros que apoiam o Ministério de Louvor SM1. Em breve, esta página poderá receber mais informações sobre os serviços e formas de contato."
     }

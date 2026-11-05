@@ -22,3 +22,19 @@
 .sponsor-card-image.no-cover .card-category{margin-right:auto}
 .sponsor-card-image.no-cover .card-arrow{margin-left:auto}
 #sponsorWhatsapp[hidden],#sponsorCover[hidden]{display:none!important}
+
+
+/* Faixa de logos na capa e identidade visual dos cards de parceiros */
+.hero-partners{background:#080808;color:#fff;padding:28px 10% 42px;border-top:1px solid #1b1b1b}
+.hero-partners-inner{max-width:1200px;margin:0 auto}
+.hero-partners-label{margin:0 0 18px;color:#777;font-size:9px;letter-spacing:2.4px;text-align:center;font-weight:700}
+.hero-partner-logos{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));align-items:center;gap:16px}
+.hero-partner-logo{height:78px;display:flex;align-items:center;justify-content:center;padding:8px 12px;opacity:.82;transition:opacity .2s,transform .2s}
+.hero-partner-logo:hover{opacity:1;transform:translateY(-3px)}
+.hero-partner-logo img{display:block;max-width:100%;width:100%;height:100%;object-fit:contain}
+.sponsor-card-image.sponsor-logo-stage{height:210px;background:#101010;display:flex;align-items:center;justify-content:center;padding:22px;overflow:hidden}
+.sponsor-card-logo{display:block;width:100%;height:100%;object-fit:contain;min-width:0;min-height:0}
+.sponsor-logo-stage .card-category{position:absolute;left:14px;bottom:14px;z-index:1}
+.sponsor-logo-stage .card-arrow{position:absolute;right:16px;bottom:12px;z-index:1}
+@media(max-width:800px){.hero-partners{padding:24px 7% 32px}.hero-partner-logos{grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.hero-partner-logo{height:72px}}
+@media(max-width:520px){.hero-partners{padding:22px 7% 28px}.hero-partner-logos{grid-template-columns:repeat(3,minmax(0,1fr));gap:4px}.hero-partner-logo{height:64px;padding:6px}.sponsor-card-image.sponsor-logo-stage{height:205px;padding:24px}}
