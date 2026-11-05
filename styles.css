@@ -46,3 +46,18 @@
 .product-card{overflow:hidden}
 .product-info>a{transition:opacity .2s}
 .product-info>a:hover{opacity:.65}
+
+
+/* Imagens originais em alta resolução para os destaques dos parceiros */
+.sponsor-cover.portrait-cover{
+  height:520px;
+  background-size:auto 100%;
+  background-position:center;
+  background-color:#101010;
+}
+@media(max-width:800px){
+  .sponsor-cover.portrait-cover{height:460px;background-size:auto 100%}
+}
+@media(max-width:520px){
+  .sponsor-cover.portrait-cover{height:430px;background-size:auto 100%}
+}

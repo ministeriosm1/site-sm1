@@ -124,6 +124,7 @@ function renderSponsor() {
       cover.hidden = false;
       cover.style.backgroundImage = `linear-gradient(0deg,rgba(0,0,0,.16),rgba(0,0,0,.02)),url("${sponsor.cover}")`;
       cover.classList.add("has-image");
+      if (sponsor.coverFit === "contain") cover.classList.add("portrait-cover");
       cover.innerHTML = "";
       cover.setAttribute("role", "img");
       cover.setAttribute("aria-label", `Produto da ${sponsor.name}`);
