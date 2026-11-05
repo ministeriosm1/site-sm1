@@ -1,5 +1,5 @@
 const $ = (selector) => document.querySelector(selector);
-const sponsors = (window.SM1_SITE && SM1_SITE.sponsors) || [];
+const sponsors = (typeof SM1_SITE !== "undefined" && Array.isArray(SM1_SITE.sponsors)) ? SM1_SITE.sponsors : [];
 
 function waLink(number, message = "Olá! Vi a empresa no site do SM1 e gostaria de mais informações.") {
   const clean = (number || "").replace(/\D/g, "");
