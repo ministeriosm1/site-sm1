@@ -14,3 +14,11 @@
 .sponsor-cover.has-image{background-position:center;background-size:cover}
 .product-info p{min-height:0}
 @media(max-width:520px){.sponsor-logo{height:76px;margin-bottom:18px}.product-image{height:auto;aspect-ratio:1.08}}
+
+/* Cartões de parceiros sem fotografia: identidade visual temporária até receber as artes. */
+.sponsor-card-image.no-cover{background:radial-gradient(circle at 50% 45%,#303030 0,#191919 58%,#111 100%);align-items:center;justify-content:center}
+.card-monogram{font:700 clamp(48px,6vw,76px)/1 "Manrope",sans-serif;letter-spacing:-5px;color:#555;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%)}
+.sponsor-card-image.no-cover .card-category,.sponsor-card-image.no-cover .card-arrow{position:relative;z-index:1}
+.sponsor-card-image.no-cover .card-category{margin-right:auto}
+.sponsor-card-image.no-cover .card-arrow{margin-left:auto}
+#sponsorWhatsapp[hidden],#sponsorCover[hidden]{display:none!important}

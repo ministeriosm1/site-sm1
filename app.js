@@ -48,7 +48,8 @@ function renderHome() {
 
     grid.innerHTML = visible.length ? visible.map((sponsor) => `
       <a class="sponsor-card" href="patrocinador.html?empresa=${encodeURIComponent(sponsor.slug)}">
-        <div class="sponsor-card-image" style="${sponsor.cover ? `background-image:linear-gradient(0deg,rgba(0,0,0,.35),rgba(0,0,0,.02)),url('${sponsor.cover}')` : ""}">
+        <div class="sponsor-card-image${sponsor.cover ? " has-cover" : " no-cover"}" style="${sponsor.cover ? `background-image:linear-gradient(0deg,rgba(0,0,0,.35),rgba(0,0,0,.02)),url('${sponsor.cover}')` : ""}">
+          ${!sponsor.cover ? `<span class="card-monogram">${sponsor.name.split(/\s+/).slice(0, 2).map((part) => part[0]).join("").toUpperCase()}</span>` : ""}
           <span class="card-category">${sponsor.category || "PARCEIRO SM1"}</span>
           <span class="card-arrow" aria-hidden="true">↗</span>
         </div>
@@ -109,20 +110,30 @@ function renderSponsor() {
   }
 
   const cover = $("#sponsorCover");
-  if (cover && sponsor.cover) {
-    cover.style.backgroundImage = `linear-gradient(0deg,rgba(0,0,0,.16),rgba(0,0,0,.02)),url("${sponsor.cover}")`;
-    cover.classList.add("has-image");
-    cover.innerHTML = "";
-    cover.setAttribute("role", "img");
-    cover.setAttribute("aria-label", `Produto da ${sponsor.name}`);
+  if (cover) {
+    if (sponsor.cover) {
+      cover.hidden = false;
+      cover.style.backgroundImage = `linear-gradient(0deg,rgba(0,0,0,.16),rgba(0,0,0,.02)),url("${sponsor.cover}")`;
+      cover.classList.add("has-image");
+      cover.innerHTML = "";
+      cover.setAttribute("role", "img");
+      cover.setAttribute("aria-label", `Produto da ${sponsor.name}`);
+    } else {
+      cover.hidden = true;
+    }
   }
 
   const sponsorWhatsapp = $("#sponsorWhatsapp");
   if (sponsorWhatsapp) {
-    sponsorWhatsapp.href = waLink(
-      sponsor.whatsapp,
-      `Olá! Encontrei a ${sponsor.name} pelo site do SM1 e gostaria de mais informações.`
-    );
+    if (sponsor.whatsapp) {
+      sponsorWhatsapp.href = waLink(
+        sponsor.whatsapp,
+        `Olá! Encontrei a ${sponsor.name} pelo site do SM1 e gostaria de mais informações.`
+      );
+      sponsorWhatsapp.hidden = false;
+    } else {
+      sponsorWhatsapp.hidden = true;
+    }
   }
 
   const products = sponsor.products || [];
@@ -146,9 +157,10 @@ function renderSponsor() {
 
   const links = $("#companyLinks");
   links.innerHTML = `
-    <a class="button button-light" href="${waLink(sponsor.whatsapp)}" target="_blank" rel="noopener noreferrer">WhatsApp da empresa ↗</a>
+    ${sponsor.whatsapp ? `<a class="button button-light" href="${waLink(sponsor.whatsapp)}" target="_blank" rel="noopener noreferrer">WhatsApp da empresa ↗</a>` : ""}
     ${sponsor.instagram ? `<a class="underlined-link" href="${sponsor.instagram}" target="_blank" rel="noopener noreferrer">Instagram ↗</a>` : ""}
     ${sponsor.address ? `<span class="muted">${sponsor.address}</span>` : ""}
+    ${!sponsor.whatsapp && !sponsor.instagram && !sponsor.address ? `<span class="muted">Informações de contato em atualização.</span>` : ""}
   `;
 }
 
