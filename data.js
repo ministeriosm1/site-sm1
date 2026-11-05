@@ -63,18 +63,52 @@ const SM1_SITE = {
     {
       slug: "amadeirado",
       name: "Amadeirado",
-      category: "Parceiro SM1",
+      category: "Móveis",
       logo: "images/amadeirado.png",
-      tagline: "Parceiro do Ministério de Louvor SM1.",
-      description: "A Amadeirado faz parte dos parceiros que apoiam o Ministério de Louvor SM1. Em breve, esta página poderá receber mais informações sobre a empresa e sua atuação."
+      cover: "images/amadeirado-sala-estar.webp",
+      whatsapp: "558189779237",
+      tagline: "Móveis de madeira que unem qualidade, estilo e cuidado em cada detalhe.",
+      description: "Somos a sua melhor oportunidade para transformar ambientes com produtos de madeira que unem qualidade e estilo, ao melhor custo-benefício do mercado.\n\nComo loja especializada em móveis de madeira, assumimos o compromisso de oferecer um atendimento próximo, transparente e de excelência a cada cliente e parceiro.\n\nAlém disso, entregamos produtos de alta durabilidade, valorizando a beleza natural da madeira e o cuidado minucioso em cada detalhe.\n\nAssim, cada peça carrega mais do que funcionalidade: traduz identidade, história, propósito e a essência de quem a escolhe.",
+      products: [
+        {
+          name: "Banquetas de madeira",
+          description: "Banquetas com acabamento amadeirado para compor bancadas, cozinhas e espaços de convivência.",
+          image: "images/amadeirado-banquetas.webp"
+        },
+        {
+          name: "Armários para cozinha",
+          description: "Móveis de madeira para organização e composição de cozinhas acolhedoras.",
+          image: "images/amadeirado-cozinha.webp"
+        },
+        {
+          name: "Mesa de cabeceira",
+          description: "Peça funcional para o quarto, com gaveta e espaço inferior de apoio.",
+          image: "images/amadeirado-mesa-cabeceira.webp"
+        },
+        {
+          name: "Rack para sala",
+          description: "Rack em madeira com nichos abertos para organizar e valorizar a sala de estar.",
+          image: "images/amadeirado-rack.webp"
+        },
+        {
+          name: "Conjunto para sala de estar",
+          description: "Composição de sofá e poltronas com estrutura de madeira e estofados claros.",
+          image: "images/amadeirado-sala-estar.webp"
+        },
+        {
+          name: "Mesa de jantar com cadeiras",
+          description: "Conjunto de mesa e cadeiras em madeira para reunir família e amigos.",
+          image: "images/amadeirado-mesa-jantar.webp"
+        }
+      ]
     },
     {
       slug: "antonio-barbosa-madeireira",
-      name: "Antônio Barbosa Madeireira",
-      category: "Madeireira",
+      name: "Antônio Barbosa Esquadrias",
+      category: "Esquadrias",
       logo: "images/antonio-barbosa-esquadrias.png",
       tagline: "Parceira do Ministério de Louvor SM1.",
-      description: "A Antônio Barbosa Madeireira faz parte dos parceiros que apoiam o Ministério de Louvor SM1. Em breve, esta página poderá receber mais informações sobre a empresa e seus produtos."
+      description: "Antônio Barbosa Esquadrias faz parte dos parceiros que apoiam o Ministério de Louvor SM1. Em breve, esta página poderá receber mais informações sobre a empresa e suas esquadrias."
     },
     {
       slug: "miqueias-eletricista",
