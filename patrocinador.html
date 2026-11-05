@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080808">
+  <meta name="description" content="Conheça os parceiros do Ministério de Louvor SM1 e seus produtos."><title>Parceiro | SM1</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header" id="top">
+    <a class="brand" href="index.html"><img class="brand-logo" src="images/logo-sm1.png" alt="SM1 Ministério de Louvor"></a>
+    <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
+    <nav class="main-nav"><a href="index.html#sobre">O SM1</a><a href="index.html#parceiros">Parceiros</a><a href="index.html#contato">Contato</a></nav>
+  </header>
+  <main id="sponsorPage">
+    <section class="sponsor-hero section-wrap">
+      <a class="back-link" href="index.html#parceiros">← VOLTAR AOS PARCEIROS</a>
+      <div class="sponsor-detail-heading">
+        <div><img id="sponsorLogo" class="sponsor-logo" alt="" hidden><p class="eyebrow" id="sponsorCategory">PARCEIRO SM1</p><h1 id="sponsorName">Nome da empresa</h1><p class="sponsor-description" id="sponsorDescription"></p></div>
+        <a class="button button-light" id="sponsorWhatsapp" href="https://wa.me/" target="_blank" rel="noopener">Falar com a empresa <span>↗</span></a>
+      </div>
+      <div class="sponsor-cover" id="sponsorCover"><span>IMAGEM DA EMPRESA</span></div>
+    </section>
+    <section class="catalog-section section-wrap">
+      <div class="section-kicker">CATÁLOGO / PRODUTOS</div>
+      <div class="catalog-heading"><h2>Conheça os <em>produtos.</em></h2><p id="productCount"></p></div>
+      <div class="product-grid" id="productGrid"></div>
+      <div class="company-contact">
+        <div><p class="eyebrow">FALE DIRETAMENTE</p><h3>Encontre o que procura?</h3><p class="muted">Entre em contato com a empresa para consultar disponibilidade, valores e condições.</p></div>
+        <div class="company-links" id="companyLinks"></div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer"><a class="brand brand-footer" href="index.html"><img class="brand-logo" src="images/logo-sm1.png" alt="SM1 Ministério de Louvor"></a><span>© <span id="year"></span> SM1. Todos os direitos reservados.</span><a href="index.html#parceiros">TODOS OS PARCEIROS ↗</a></footer>
+  <script src="data.js"></script><script src="app.js"></script>
+</body>
+</html>
